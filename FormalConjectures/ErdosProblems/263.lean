@@ -64,7 +64,8 @@ theorem erdos_263.parts.ii : answer(False) ↔
 A folklore result states that any $a_n$ satisfying $\lim_{n \to \infty} a_n^{\frac{1}{2^n}} = \infty$
 has $\sum \frac{1}{a_n}$ converging to an irrational number.
 -/
-@[category research solved, AMS 11]
+@[category research solved, AMS 11,
+  formal_proof using lean4 at "https://github.com/arex1337/erdos-263-lean/blob/76b5484850ab7cedcc3918eb6e9210938dc46662/Erdos263/FormalConjecturesAdapter.lean"]
 theorem erdos_263.variants.folklore (a : ℕ -> ℕ)
     (ha : atTop.Tendsto (fun n : ℕ => (a n : ℝ) ^ (1 / (2 ^ n : ℝ))) atTop) :
     Irrational <| ∑' n, (1 : ℝ) / (a n : ℝ) := by
