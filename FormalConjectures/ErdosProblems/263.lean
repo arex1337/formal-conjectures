@@ -65,7 +65,7 @@ A folklore result states that any $a_n$ satisfying $\lim_{n \to \infty} a_n^{\fr
 has $\sum \frac{1}{a_n}$ converging to an irrational number.
 -/
 @[category research solved, AMS 11,
-  formal_proof using lean4 at "https://github.com/arex1337/erdos-263-lean/blob/76b5484850ab7cedcc3918eb6e9210938dc46662/Erdos263/FormalConjecturesAdapter.lean"]
+  formal_proof using lean4 at "https://github.com/arex1337/erdos-263-lean/blob/8891d92fcc0f19ffa4cd3e86c19c48fa2d9162c7/Erdos263/FormalConjecturesAdapter.lean"]
 theorem erdos_263.variants.folklore (a : ℕ -> ℕ)
     (ha : atTop.Tendsto (fun n : ℕ => (a n : ℝ) ^ (1 / (2 ^ n : ℝ))) atTop) :
     Irrational <| ∑' n, (1 : ℝ) / (a n : ℝ) := by
